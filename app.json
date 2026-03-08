@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "gosafe",
+    "slug": "gosafe",
+    "scheme": "gosafe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location to show your position on the map during walks.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs access to your location to track your position during walks for safety purposes."
+      },
+      "bundleIdentifier": "com.anonymous.gosafe"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE"
+      ],
+      "package": "com.anonymous.gosafe"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow GoSafe to use your location for real-time tracking during walks.",
+          "locationAlwaysPermission": "Allow GoSafe to use your location for real-time tracking during walks.",
+          "locationWhenInUsePermission": "Allow GoSafe to use your location to show your position on the map."
+        }
+      ],
+      "expo-notifications",
+      "expo-asset"
+    ]
+  }
+}
