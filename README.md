@@ -80,4 +80,4 @@ To run the project locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/gosafe.git
+git clone https://github.com/SuhayraAhmed/GoSafeApp.git
