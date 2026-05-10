@@ -14,7 +14,7 @@ export default function LoginScreen({ navigation }) {
   const [request, response, promptAsync] = Google.useIdTokenAuthRequest({
     expoClientId: EXPO_GO_WEB_CLIENT_ID,
     iosClientId: EXPO_GO_WEB_CLIENT_ID,
-    androidClientId: EXPO_GO_WEB_CLIENT_ID, // LÄGG TILL DENNA
+    androidClientId: EXPO_GO_WEB_CLIENT_ID, 
   });
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function LoginScreen({ navigation }) {
         }
         const credential = GoogleAuthProvider.credential(idToken);
         await signInWithCredential(auth, credential);
-        // Navigation sker automatiskt via onAuthStateChanged i App.js
+        
       }
     };
     run().catch((e) => {
@@ -38,17 +38,17 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <SafeAreaView style={loginStyles.container}>
-      {/* Top blå header med "Logo" */}
+      
       <View style={loginStyles.hero}>
         <Text style={loginStyles.logoText}>GoSafe</Text>
       </View>
 
-      {/* Välkomsttext */}
+      {}
       <View style={loginStyles.content}>
         <Text style={loginStyles.welcomeLine1}>Welcome to GoSafe &</Text>
         <Text style={loginStyles.welcomeLine2}>let's get started</Text>
 
-        {/* Sign up with Email */}
+       
         <TouchableOpacity
           style={loginStyles.primaryButton}
           activeOpacity={0.85}
@@ -59,9 +59,9 @@ export default function LoginScreen({ navigation }) {
 
         <Text style={loginStyles.orText}>or</Text>
 
-        {/* Social ikoner */}
+        
         <View style={loginStyles.socialRow}>
-          {/* Google */}
+          
           <TouchableOpacity
             style={loginStyles.socialBtn}
             activeOpacity={0.7}
@@ -71,18 +71,18 @@ export default function LoginScreen({ navigation }) {
             <FontAwesome5 name="google" size={22} color="#DB4437" />
           </TouchableOpacity>
 
-          {/* Facebook dummy - inaktivera temporärt */}
+          
           <TouchableOpacity style={loginStyles.socialBtn} activeOpacity={0.7} disabled>
             <FontAwesome5 name="facebook" size={22} color="#4267B2" />
           </TouchableOpacity>
 
-          {/* Twitter/X dummy - inaktivera temporärt */}
+        
           <TouchableOpacity style={loginStyles.socialBtn} activeOpacity={0.7} disabled>
             <FontAwesome5 name="twitter" size={22} color="#1DA1F2" />
           </TouchableOpacity>
         </View>
 
-        {/* Info text om Google auth */}
+        
         <Text style={loginStyles.infoText}>
           Note: Google sign-in works with the same client ID for Expo Go
         </Text>

@@ -52,7 +52,6 @@ export default function EmergencyContactsScreen({ navigation }) {
       return;
     }
 
-    // Kolla om telefonnummer redan finns
     const contactExists = contacts.some(contact => 
       contact.phone === phone.trim()
     );
@@ -62,7 +61,6 @@ export default function EmergencyContactsScreen({ navigation }) {
       return;
     }
 
-    // Kolla om användaren kan lägga till fler kontakter
     const canAddMore = await canAddMoreContacts(auth.currentUser.uid);
     if (!canAddMore) {
       Alert.alert('Limit Reached', 'You can only have up to 5 emergency contacts');
@@ -80,7 +78,6 @@ export default function EmergencyContactsScreen({ navigation }) {
 
       const savedContact = await addEmergencyContact(user.uid, newContact);
       
-      // Uppdatera lokal state
       setContacts(prevContacts => [savedContact, ...prevContacts]);
       
       setName('');

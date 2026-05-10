@@ -43,7 +43,6 @@ export default function SettingsScreen({ navigation }) {
           <Text style={settingsStyles.menuText}>Help & Support</Text>
         </TouchableOpacity>
 
-        {/* Logout Button */}
         <TouchableOpacity 
           style={[settingsStyles.menuItem, { marginTop: 20 }]} 
           onPress={handleLogout}
@@ -53,7 +52,7 @@ export default function SettingsScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      {/* Bottom Navigation */}
+      
       <View style={settingsStyles.bottomNav}>
         <TouchableOpacity 
           style={settingsStyles.navItem} 

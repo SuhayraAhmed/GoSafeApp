@@ -12,7 +12,7 @@ export default function EmailAuth({ navigation }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSignUp, setIsSignUp] = useState(true);
 
-   // I din EmailAuth.js, uppdatera handleAuth funktionen:
+   
    const handleAuth = async () => {
     if (!email || !password) {
     Alert.alert('Error', 'Please enter both email and password');
@@ -29,12 +29,12 @@ export default function EmailAuth({ navigation }) {
    try {
     let userCredential;
     if (isSignUp) {
-      // Create new account
+      
       userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log('User created:', userCredential.user.uid);
       Alert.alert('Success', 'Account created successfully!');
       
-      // Skapa användardokument i Firestore när man registrerar sig
+      
       await createUserDocument(userCredential.user);
     } else {
       // Sign in
@@ -42,7 +42,7 @@ export default function EmailAuth({ navigation }) {
       console.log('User signed in:', userCredential.user.uid);
     }
     
-    // Navigate to Home after successful authentication
+    
      navigation.replace('Home');
    } catch (error) {
     console.error('Auth error:', error);
