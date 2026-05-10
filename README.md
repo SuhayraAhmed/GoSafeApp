@@ -72,8 +72,23 @@ The color palette includes:
 Blue is used as the main color because it represents trust, safety, and stability.
 
 ---
+# Setup and Installation
 
-## Installation
+Follow these steps to run the GoSafe project locally on your computer.
+
+## Prerequisites
+
+Before starting, make sure you have installed:
+
+- Node.js
+- npm
+- Expo CLI
+- Git
+
+You also need:
+
+- A code editor such as VS Code
+- Expo Go app on your mobile device (optional)
 
 To run the project locally:
 
